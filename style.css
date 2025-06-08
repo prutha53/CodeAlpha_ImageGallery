@@ -1,0 +1,241 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+.hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  overflow: hidden;
+}
+.hero-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  font-family: "Pacifico", "Great Vibes", cursive;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+.hero-text h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+.category-bar {
+  background: #fff;
+  padding: 10px 1rem;
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.categories {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 0.5rem;
+}
+.categories::-webkit-scrollbar {
+  display: none;
+}
+.categories button {
+  flex: 0 0 auto;
+  padding: 6px 14px;
+  border: none;
+  background: #eee;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  scroll-snap-align: start;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+.categories button:hover,
+.categories .active {
+  background: #000;
+  color: #fff;
+}
+main {
+  padding: 0.1rem;
+  text-align: center;
+}
+main h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: "Pacifico", "Great Vibes", cursive;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.03);
+}
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.lightbox {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.lightbox-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 95vw;
+  max-height: 85vh;
+}
+.lightbox-img-wrapper {
+  max-width: 90vw;
+  max-height: 80vh;
+}
+.lightbox-img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+.nav-btn {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 2.5rem;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 6px;
+  z-index: 2;
+}
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+@media (max-width: 600px) {
+  .lightbox-content {
+    gap: 0.5rem;
+  }
+  .nav-btn {
+    font-size: 2rem;
+    padding: 8px 10px;
+  }
+  .lightbox-img-wrapper {
+    max-width: 85vw;
+    max-height: 65vh;
+  }
+  .lightbox-img {
+    max-height: 65vh;
+  }
+  .close {
+    font-size: 2.5rem;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+}
+@media (max-width: 1024px) {
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+  .card img {
+    height: 160px;
+  }
+}
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 600px) {
+  .hero {
+    height: auto;
+  }
+  .hero-img img {
+    height: auto;
+    object-fit: contain;
+  }
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+  .category-bar {
+    padding: 8px 0.5rem;
+  }
+  .categories button {
+    font-size: 0.9rem;
+    padding: 5px 12px;
+  }
+  main h2 {
+    font-size: 1.5rem;
+  }
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.75rem;
+  }
+  .card img {
+    height: 130px;
+  }
+  .lightbox-img {
+    max-width: 95vw;
+    max-height: 70vh;
+  }
+  .nav-btn {
+    font-size: 2rem;
+    padding: 8px 14px;
+  }
+  .close {
+    font-size: 2.5rem;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+}

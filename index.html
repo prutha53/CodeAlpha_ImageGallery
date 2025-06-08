@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section class="hero">
+  <div class="hero-img">
+    <img src="image/abc.jpeg"/>
+  </div>
+  <div class="hero-text">
+    <h1>Beauty Around Us🌍✨</h1>
+  </div>
+</section>
+
+
+  <nav class="category-bar">
+    <div class="categories">
+      <button data-filter="All" class="active">✈️ All</button>
+      <button data-filter="Nature">🏞️ Nature</button>
+      <button data-filter="Mountains">🗻 Mountains</button>
+      <button data-filter="Beaches">🌊 Beaches</button>
+      <button data-filter="Cities">🌆 Cities</button>
+      <button data-filter="Landmarks">🏯 Landmarks</button>
+      <button data-filter="Wildlife">🦒 Wildlife</button>
+      <button data-filter="Art">🎨 Art & Culture</button>
+      <button data-filter="Forests">🌳 Forests</button>
+      <button data-filter="Sunsets">🌄 Sunsets</button>
+    </div>
+  </nav>
+  <main>
+    <h2>Explore the World Through Every Frame✨</h2>
+    <div class="gallery">
+      <div class="card" data-category="Mountains"><img src="image/mo.jpg" alt="Mountains"/></div>
+      <div class="card" data-category="Mountains"><img src="image/mo3.jpg" alt="Mountains"/></div>
+      <div class="card" data-category="Cities"><img src="image/ct3.jpg" alt="City"/></div>
+      <div class="card" data-category="Nature"><img src="image/nt3.jpg" alt="Nature"/></div>
+      <div class="card" data-category="Wildlife"><img src="image/wl1.jpg" alt="Wildlife"/></div>
+      <div class="card" data-category="Beaches"><img src="image/be.jpg" alt="Beach"/></div>
+      <div class="card" data-category="Cities"><img src="image/ct2.jpg" alt="City"/></div>
+      <div class="card" data-category="Forests"><img src="image/fo1.jpg" alt="Forest"/></div>
+      <div class="card" data-category="Art"><img src="image/ac3.jpg" alt="Art"/></div>
+      <div class="card" data-category="Sunsets"><img src="image/ss.jpg" alt="Sunsets"/></div>
+      <div class="card" data-category="Cities"><img src="image/ct.jpg" alt="City"/></div>
+      <div class="card" data-category="Landmarks"><img src="image/ls.jpg" alt="Landmarks"/></div>
+      <div class="card" data-category="Wildlife"><img src="image/wl2.jpg" alt="Wildlife"/></div>
+      <div class="card" data-category="Nature"><img src="image/nt1.jpg" alt="Nature"/></div>
+      <div class="card" data-category="Mountains"><img src="image/mo2.jpg" alt="Mountains"/></div>
+      <div class="card" data-category="Beaches"><img src="image/be3.jpg" alt="Beach"/></div>
+      <div class="card" data-category="Cities"><img src="image/ct1.jpg" alt="City"/></div>
+      <div class="card" data-category="Landmarks"><img src="image/ls2.jpg" alt="Landmarks"/></div>
+      <div class="card" data-category="Wildlife"><img src="image/wl3.jpg" alt="Wildlife"/></div>
+      <div class="card" data-category="Art"><img src="image/ac2.jpg" alt="Culture"/></div>
+      <div class="card" data-category="Forests"><img src="image/fo.jpg" alt="Forest"/></div>
+      <div class="card" data-category="Sunsets"><img src="image/ss3.jpg" alt="Sunset"/></div>
+      <div class="card" data-category="Landmarks"><img src="image/ls1.jpg" alt="Landmarks"/></div>
+      <div class="card" data-category="Art"><img src="image/ac1.jpg" alt="Art"/></div>
+      <div class="card" data-category="Sunsets"><img src="image/ss2.jpg" alt="Sunsets"/></div>
+      <div class="card" data-category="Forests"><img src="image/fo3.jpg" alt="Forest"/></div>
+      <div class="card" data-category="Beaches"><img src="image/be2.jpg" alt="Beach"/></div>
+      <div class="card" data-category="Mountains"><img src="image/mo1.jpg" alt="Mountains"/></div>
+      <div class="card" data-category="Nature"><img src="image/nt.jpg" alt="Nature"/></div>
+      <div class="card" data-category="Beaches"><img src="image/be1.jpg" alt="Beach"/></div>
+      <div class="card" data-category="Nature"><img src="image/nt2.jpg" alt="Nature"/></div>
+      <div class="card" data-category="Art"><img src="image/ac.jpg" alt="Culture"/></div>
+      <div class="card" data-category="Landmarks"><img src="image/ls3.jpg" alt="Landmarks"/></div>
+      <div class="card" data-category="Wildlife"><img src="image/wl.jpg" alt="Wildlife"/></div>
+      <div class="card" data-category="Forests"><img src="image/fo.jpg" alt="Forest"/></div>
+      <div class="card" data-category="Sunsets"><img src="image/ss1.jpg" alt="Sunset"/></div>
+    </div>
+  </main>
+
+  <div class="lightbox" id="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <div class="lightbox-content">
+    <button class="nav-btn prev" onclick="prevImage()">&#10094;</button>
+
+    <div class="lightbox-img-wrapper">
+      <img class="lightbox-img" id="lightbox-img" src="" alt="Preview">
+    </div>
+
+    <button class="nav-btn next" onclick="nextImage()">&#10095;</button>
+  </div>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
+ 
