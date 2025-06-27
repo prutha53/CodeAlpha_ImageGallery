@@ -10,15 +10,16 @@
 
   <section class="hero">
   <div class="hero-img">
-    <img src="image/abc.jpeg"/>
-  </div>
-  <div class="hero-text">
-    <h1>Beauty Around Us🌍✨</h1>
+    <img src="image/bg.jpg" alt="Hero Image" />
+    <div class="hero-btn-wrapper">
+      <button onclick="document.getElementById('category-bar').scrollIntoView({ behavior: 'smooth' })">
+        ✨Explore Gallery✨
+      </button>
+    </div>
   </div>
 </section>
 
-
-  <nav class="category-bar">
+  <nav id="category-bar" class="category-bar">
     <div class="categories">
       <button data-filter="All" class="active">✈️ All</button>
       <button data-filter="Nature">🏞️ Nature</button>
